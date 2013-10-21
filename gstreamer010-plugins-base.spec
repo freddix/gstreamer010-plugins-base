@@ -7,7 +7,7 @@
 Summary:	GStreamer Streaming-media framework base plugins
 Name:		gstreamer010-plugins-base
 Version:	0.10.36
-Release:	6
+Release:	7
 License:	LGPL
 Group:		Libraries
 Source0:	http://gstreamer.freedesktop.org/src/gst-plugins-base/%{gstname}-%{version}.tar.xz
