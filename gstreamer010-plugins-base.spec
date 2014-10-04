@@ -7,7 +7,7 @@
 Summary:	GStreamer Streaming-media framework base plugins
 Name:		gstreamer010-plugins-base
 Version:	0.10.36
-Release:	7
+Release:	8
 License:	LGPL
 Group:		Libraries
 Source0:	http://gstreamer.freedesktop.org/src/gst-plugins-base/%{gstname}-%{version}.tar.xz
@@ -110,8 +110,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-# We don't need plugins' *.la files
-rm -f $RPM_BUILD_ROOT%{gstlibdir}/*.la
+%{__rm} $RPM_BUILD_ROOT%{gstlibdir}/*.la
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
 
 %find_lang %{gstname}-%{gst_major_ver}
 
@@ -166,7 +166,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*-%{gst_major_ver}.so
-%{_libdir}/lib*-%{gst_major_ver}.la
 %{gstincludedir}/gst/app
 %{gstincludedir}/gst/audio
 %{gstincludedir}/gst/cdda
