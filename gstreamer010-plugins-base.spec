@@ -7,7 +7,7 @@
 Summary:	GStreamer Streaming-media framework base plugins
 Name:		gstreamer010-plugins-base
 Version:	0.10.36
-Release:	8
+Release:	9
 License:	LGPL
 Group:		Libraries
 Source0:	http://gstreamer.freedesktop.org/src/gst-plugins-base/%{gstname}-%{version}.tar.xz
@@ -37,7 +37,7 @@ BuildRequires:	xorg-libX11-devel
 BuildRequires:	xorg-libXext-devel
 BuildRequires:	xorg-libXv-devel
 Requires:	%{name}-libs = %{version}-%{release}
-Requires:	gstreamer >= %{gst_req_ver}
+Requires:	gstreamer010 >= %{gst_req_ver}
 Provides:	gstreamer-plugins-base = %{version}-%{release}
 Obsoletes:	gstreamer-plugins-base < %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
